@@ -8,3 +8,6 @@ services:
     tty: true
     volumes:
       - ./src:/src
+    environment:
+      XDEBUG_CONFIG: remote_host=${HOST} remote_port=${REMOTE_PORT} remote_enable=1 remote_connect_back=0 remote_autostart=1
+    # restart: always
